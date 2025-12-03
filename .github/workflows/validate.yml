@@ -1,0 +1,25 @@
+name: Validate data
+
+on:
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install Nix
+        uses: cachix/install-nix-action@v27
+        with:
+          extra_nix_config: |
+            experimental-features = nix-command flakes
+
+      - name: Install devenv CLI
+        run: nix profile install github:cachix/devenv/latest
+
+      - name: Validate Mergeway data via dev shell
+        run: |
+          export DEVENV_ROOT=./devenv
+          devenv shell --command "mw validate"
