@@ -45,6 +45,7 @@
             name = "mergeway-devShell";
             buildInputs = [
                 mergeway-cli
+                pkgs.graphviz
             ];
             shellHook = ''
                 alias mw="${mergeway-cli}/bin/mergeway-cli"
