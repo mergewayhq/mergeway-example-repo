@@ -1,4 +1,4 @@
 .envrc
-.devenv*
-.cache/
+.direnv
+.pre-commit-config.yaml
 
