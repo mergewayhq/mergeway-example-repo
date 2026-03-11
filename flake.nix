@@ -4,7 +4,7 @@
   inputs = {
     flake-utils.url = "github:numtide/flake-utils";
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-    mergeway-cli.url = "github:mergewayhq/mergeway-cli?tag=v0.1.0";
+    mergeway-cli.url = "github:mergewayhq/mergeway-cli?tag=v0.2.0";
     pre-commit-hooks = {
       url = "github:cachix/pre-commit-hooks.nix";
       inputs.nixpkgs.follows = "nixpkgs";
