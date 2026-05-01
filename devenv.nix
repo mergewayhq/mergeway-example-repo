@@ -8,6 +8,8 @@ in
     mergeway-cli
   ];
 
+  env.PYTHONPYCACHEPREFIX="${config.devenv.root}/.cache/cpython";
+
   languages.python = {
     enable = true;
     uv = {

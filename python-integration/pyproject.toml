@@ -1,0 +1,9 @@
+[project]
+name = "python-integration"
+version = "0.1.0"
+description = "Example Mergeway Python integration against the sample content repo"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "mergeway>=0.2.0",
+]
